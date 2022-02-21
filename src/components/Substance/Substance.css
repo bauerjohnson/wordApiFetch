@@ -1,0 +1,67 @@
+.blink {
+    animation-name: up;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+   }
+
+   @keyframes up {
+    0%, 10%{color: #228B22;}
+    /* 25% {color:white;}
+    50% {color: red;} */
+    90%, 100% {color: white;} 
+    /* 100% {color: white;} */
+}
+
+tr td:nth-child(2) {
+  animation-name: up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+
+
+}
+
+
+tr td:nth-child(3) {
+  animation-name: up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; 
+  animation-delay: 4s;
+}
+
+
+tr td:nth-child(4) {
+  animation-name: up;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-delay: 8s;
+
+}
+
+
+tr td:nth-child(5) {
+  animation-name: up;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+  animation-delay: 10s ;
+}
+
+
+tr td:nth-child(6) {
+  animation-name: up;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+  animation-delay: 12s ;
+}
+
+tr td:nth-child(7) {
+  animation-name: up;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+  animation-delay: 14s ;
+}
+
+.word {
+  color: white;
+  text-transform: uppercase;
+}

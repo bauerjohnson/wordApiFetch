@@ -1,139 +1,128 @@
-import React, {useState} from 'react';
-import Api from './Api';
+import React from 'react';
 
-import List from './components/List';
+import TypeOf from './components/Typeof/TypeOf';
+import Partof from './components/Partof/Partof';
+import Haspart from './components/Haspart/Haspart';
+import Similar from './components/Similar/Similar';
+import Synonyms from './components/Synonyms/Synonyms';
+import Definition from './components/Definition/Definition';
+import Syllable from './components/Syllable/Syllable';
+import Instanceof from './components/Instanceof/Instanceof';
+import Hascategories from './components/Hascategories/Hascategories';
+import Substance from './components/Substance/Substance';
 import './App.css';
 
 function App() {
-  const [putword, setputword] = useState([]);
-  const [meaning, setmeaning] = useState(false);
-  // const dummyMovies = [
-  //   {
-  //     id: 1,
-  //     wordy: 'paint',
-  //     meaning: ['love, beauty',]
-    
-  //   },
-  //   {
-  //     id: 2,
-  //     wordy: 'Some Dummy Movie 2',
-  //     meaning: 'love, beauty',
-      
-  //   },
-  // ];
-  // var options = {
-  //   method: 'GET',
-  //   url: 'https://wordsapiv1.p.rapidapi.com/words/hatchback/typeOf',
-  //   headers: {
-  //     'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
-  //     'x-rapidapi-key': 'be3419a0f3msh2a49125fa632e4cp1751d8jsna5dcd08280e8'
-  //   }
-  // };
-
-
-  // // function fetchdatahandler () {
-  //  fetch (options).then(response => {
-  //     console.log(response.data);
-      // return response.properties;
-     
-      
-    // })
-    // .then(data => {
-    //   const transformed = data.map(info => {
-    //     return {
-    //       id: info.id,
-    //     wordy : info.word,
-    //     meaning: info.typeOf  
-    //     }
-    //   })
-    // setputword(transformed) 
-    // })
-  // }  
-  
-  
-
-
-  // var options = {
-  //   method: 'GET',
-  //   url: 'https://wordsapiv1.p.rapidapi.com/words/hatchback/typeOf',
-  //   headers: {
-  //     'x-rapidapi-host': 'wordsapiv1.p.rapidapi.com',
-  //     'x-rapidapi-key': 'be3419a0f3msh2a49125fa632e4cp1751d8jsna5dcd08280e8'
-  //   }
-  // };
-  
-  // // axios.request(options)
-  //    fetch (options)
-  // .then(response => {
-  //   // return response.json();
-  //   console.log(response.data);
-  // }).catch(function (error) {
-  //   console.error(error);
-  // });
-
-// function getword () {
-//   return putword.map((word, typeOf) => {
-//     return  <List wordy ={word} meaning ={typeOf} key={1}/>
-//   })
-// }
-
-// useEffect(() => {
-//   getword ();
-// }, [])
-
- 
-// if(putword) {
-
-// const fetchdata = (event) => {
-//   event.preventDefault();
-
-
-// Api.getData()
-// .then((response) => {
-//   setputword(response.data);
-//   console.log(response.data)
-// }).catch((error) => {
-//   console.log(error)
-// })
-// }
-
-
-
-const fetchdata = (event) => {
-  console.log(event);
-  event.preventDefault();
-
-
-Api.getData()
-.then((response) => {
-  let str = response.data;
-
-  setputword(str);
-  console.log(str)
-}).catch((error) => {
-  console.log(error)
-})
-}
-
-
-
   return (
     <React.Fragment>
-      <section>
-        <button onClick={fetchdata}>fetch word</button>
+      <section className='heading'>
+        WORD API
       </section>
-      <section>
-    {/* <List words ={putword}/> */}
-<h1>{putword.word}</h1>
+     <header className='header'>
+     Words API lets you retrieve information about English words, 
+     including definitions, synonyms, rhymes, pronunciation, syllables,
+      and frequency of usage. It also can tell you about relationships
+       between words, for instance that “math” has categories like
+        “algebra” and “geometry”, or that a “finger” is part of a
+         “hand”. <span className='span'>CLICK</span> each word to see the answer
+     </header>
+ 
+      <table className="content-table">
+        <thead>
+          <tr className='split'>
+            
+            <th>WORD</th>
+            
+            
+            <th>RELATED MEANING</th>
+          </tr>
+        </thead>
+        
+      </table>
 
-<li>{putword.typeOf}</li>
+      <table className="content-table">
+       
+        <tbody>
+        <TypeOf/>
+         
+        </tbody>       
+      </table>
 
+      <table className="content-table">
+       
+        <tbody>
+      
+         <Partof/>
+        </tbody>       
+      </table>
 
-      </section>
+      
+      <table className="content-table">
+       
+        <tbody>
+      
+         <Haspart/>
+        </tbody>       
+      </table>
+
+      <table className="content-table">
+       
+        <tbody>
+      
+         <Similar/>
+        </tbody>       
+      </table>
+
+      <table className="content-table">
+       
+       <tbody>
+     
+       <Synonyms/>
+       </tbody>       
+     </table>
+
+     <table className="content-table">
+       
+       <tbody>
+     
+       <Definition/>
+       </tbody>       
+     </table>      
+
+     <table className="content-table">
+       
+       <tbody>
+     
+       <Syllable/>
+       </tbody>       
+     </table>     
+
+     <table className="content-table">
+       
+       <tbody>
+     
+      <Instanceof/>
+       </tbody>       
+     </table>     
+
+     <table className="content-table">
+       
+       <tbody>
+     
+      <Hascategories/>
+       </tbody>       
+     </table>     
+
+     <table className="content-table">
+       
+       <tbody>
+     
+      <Substance/>
+       </tbody>       
+     </table>     
     </React.Fragment>
   );
 }
-// return null;
-// }
+
 
 export default App;
