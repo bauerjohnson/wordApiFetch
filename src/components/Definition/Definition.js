@@ -5,7 +5,7 @@ import "./Definition.css"
 
 const Definition = () => {
     const [putword, setputword] = useState([]);
-    const [meaning1, setmeaning1] = useState(["DEFINE INCREDIBLE"]);
+    const [meaning1, setmeaning1] = useState(["define the word 'incredible'"]);
     
     
   
