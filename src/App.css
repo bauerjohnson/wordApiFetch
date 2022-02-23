@@ -3,13 +3,19 @@
 }
 
 section {
-  margin: 1rem auto;
-  width: 90%;
-  max-width: 40rem;
+  width: 50%;
   text-align: center;
-  background-color: white;
+ margin: auto;
   padding: 2rem;
   border-radius: 12px;
+  font-size: large;
+  background: yellow;
+  border: 1px solid #230052;
+  color: red;
+  padding: 0.75rem 2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  
 }
 
 button {
@@ -39,13 +45,14 @@ li {
 }
 
 .heading {
-  font-size: large;
+  /* font-size: large;
   background: yellow;
   border: 1px solid #230052;
   color: red;
   padding: 0.75rem 2rem;
   border-radius: 20px;
   font-weight: 600;
+  margin: auto; */
 
 
 }
@@ -58,7 +65,7 @@ h2 {
   border-collapse: collapse;
   margin: 15px auto;
   font-size: 0.9em;
-  min-width: 100%;
+  width: 100%;
   
   overflow: hidden;
   
@@ -66,10 +73,11 @@ h2 {
 }
 
 
-.content-table thead tr {
+.content-table thead {
   background-color: #557a95;
-  color: #ffffff;
-  text-align: left;
+  /* color: #ffffff; */
+  color: wheat;
+
   font-weight: bold;
  
  
@@ -104,6 +112,7 @@ td{
 } */
 
 .content-table tbody tr:last-of-type {
+  position: relative;
   border-bottom: 2px solid #009879;
 }
 
@@ -130,12 +139,25 @@ td{
 
 @media(max-width: 400px) {
  
- 
+  
   .split {
-    width: 100%
+    /* width: 100% */
   }
 
-  .content-table thead tr {
+  .content-table thead {
     background: none;
   }
+
+  .content-table tbody tr:last-of-type {
+    position: relative;
+    border-bottom: none;
+    width: 10%;
+  }
+  
+  /* .header {
+    width: 100%;
+    color: white;
+    margin: auto;
+  } */
+ 
 }

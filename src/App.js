@@ -15,6 +15,7 @@ import './App.css';
 function App() {
   return (
     <React.Fragment>
+      <container>
       <section className='heading'>
         WORD API
       </section>
@@ -34,7 +35,7 @@ function App() {
             <th>WORD</th>
             
             
-            <th>RELATED MEANING</th>
+            <th>RESULT</th>
           </tr>
         </thead>
         
@@ -119,7 +120,8 @@ function App() {
      
       <Substance/>
        </tbody>       
-     </table>     
+     </table> 
+     </container>    
     </React.Fragment>
   );
 }
